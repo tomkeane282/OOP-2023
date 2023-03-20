@@ -22,6 +22,7 @@ public class YASC extends PApplet
 	
 	public void draw()
 	{	
+		background(0);
 		ship.render();
 	}
 }

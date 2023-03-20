@@ -11,6 +11,7 @@ public class Ship {
     {
         pos = new PVector(x, y);
         this.size = size;
+        this.halfSize = size / 2;
         this.c = c;       
         this.p = p;  
     }
@@ -44,9 +45,16 @@ public class Ship {
     private float rot;
     private int c;
     private float size;
+    private float halfSize;
 
     public void render()
     {
+        p.stroke(c, 255, 255);
+        p.line(pos.x - halfSize, pos.y + halfSize, pos.x, pos.y - halfSize);
+        p.line(pos.x, pos.y, pos.x - halfSize, pos.y + halfSize);
+        p.line(pos.x, pos.y, pos.x + halfSize, pos.y + halfSize);
+        p.line(pos.x, pos.y - halfSize, pos.x + halfSize, pos.y + halfSize);
+        
     }
 
     
